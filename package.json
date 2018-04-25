@@ -1,0 +1,26 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "Kurtis Roberts Personal Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kurtis-Roberts/Personal_Website.git"
+  },
+  "author": "Kurtis Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kurtis-Roberts/Personal_Website/issues"
+  },
+  "homepage": "https://github.com/Kurtis-Roberts/Personal_Website#readme",
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
+    "jquery": "^3.3.1"
+  }
+}

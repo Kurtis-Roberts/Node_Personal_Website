@@ -1,0 +1,129 @@
+.hero {
+    background-image: url('http://snowbrains.com/wp-content/uploads/2016/10/islc2259_doug-pulsipher.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+    min-height: 650px;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-content h2 {
+    color: #fff;
+    font-size: 80px;
+}
+
+.hero-content p {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer {
+    padding: 30px 0;
+    font-size: 14px;
+    color: #BBB;
+    background: #222;
+    text-align: center;
+}
+
+/************************** CAROUSEL ******************************/
+
+
+/* equal card height */
+
+.row-equal>div[class*='col-'] {
+    display: inherit;
+    flex: 1 0 auto;
+}
+
+.row-equal .card {
+    width: 100%;
+}
+
+
+/* ensure equal card height inside carousel */
+
+.carousel-inner>.row-equal.active,
+.carousel-inner>.row-equal.next,
+.carousel-inner>.row-equal.prev {
+    display: flex;
+    margin-top: 20rem;
+}
+
+
+/* prevent flicker during transition */
+
+.carousel-inner>.row-equal.active.left,
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.8;
+    display: flex;
+}
+
+
+/* control image height */
+
+.card-img-top-250 {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.btn-outline-secondary {
+    margin-top: 5rem;
+}
+
+.carousel-inner {
+    overflow: hidden;
+    margin-top: -160px;
+    margin-bottom: -7rem;
+}
+
+.lead {
+    z-index: 99;
+}
+
+.d-block {
+    height: 385px;
+}
+
+.carousel-indicators {
+    bottom: -45px;
+}
+
+.portfolio-section {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 80vh;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    image-rendering: -webkit-optimize-contrast;
+    border-top: 1px solid darkgray;
+}
+
+.portFol {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 3rem;
+    font-size: 2.3rem;
+    color: white;
+}
+
+.myPortrait {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 20%;
+    border-radius: 15px;
+}

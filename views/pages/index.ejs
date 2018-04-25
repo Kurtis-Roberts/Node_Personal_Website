@@ -1,0 +1,31 @@
+
+<%- contentFor('hero') %>
+    <main class="hero">
+    <div class="hero-content">
+        <h2 class="animated bounceIn">Welcome to My Site!</h2>
+        <p class="lookBorder">Take a look around to learn more about me and my love for Web Development</p>
+    </div>
+    
+    </main>
+    <div class="portrait">
+        <img class="myPortrait" src="./img/Kurtis Roberts.jpg" alt="Kurtis Roberts">    
+    </div>
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="/views/index.js"></script>
+    
+    <script type='text/javascript'>
+                $(window).scroll(function() {
+      $('.myPortrait portrait').each(function() {
+        if (isScrolledIntoView(this) === true) {
+          $(this).addClass('animated bounceIn');
+        }
+      });
+    });
+    </script>
+    
+    
+    
+   
+   
