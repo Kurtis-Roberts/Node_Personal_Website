@@ -268,7 +268,6 @@ footer .social a:hover {
 
 /* ------------- About Me Section -------------- */
 .myPortrait {
-    
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -278,6 +277,10 @@ footer .social a:hover {
     border-radius: 50%;
     visibility: hidden;
     transition: opacity 1s ease;
+}
+
+.about-me {
+    font-size: 1.3rem;
 }
 
 .scroll-animations h3 {
