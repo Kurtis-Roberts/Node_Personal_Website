@@ -1,9 +1,7 @@
+function resetform() {
+    document.getElementById(".container").reset();
+    }
 
-    // If element is scrolled into view, fade it in
-    $(window).scroll(function() {
-      $('.myPortrait portrait').each(function() {
-        if (isScrolledIntoView(this) === true) {
-          $(this).addClass('fadeInLeft');
-        }
-      });
-    });
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+}

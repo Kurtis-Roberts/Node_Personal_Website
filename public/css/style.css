@@ -6,18 +6,30 @@
     padding: 50px 0;
     min-height: 650px;
     position: relative;
+    border-bottom: 2px solid gray;
+    
 }
 
 .hero-content {
     position: absolute;
-    top: 50%;
+    top: 28%;
     text-align: center;
     width: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+h2 {
+    border: 1ps solid cadetblue;
+
 }
 
 .hero-content h2 {
     color: #fff;
     font-size: 80px;
+    text-shadow: -1px 0 cadetblue, 0 1px cadetblue, 1px 0 cadetblue, 0 -1px cadetblue;
 }
 
 .hero-content p {
@@ -25,6 +37,47 @@
     font-size: 40px;
     margin-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav {
+    padding-right: 25%;
+    font-size: 15px;
+    color: black;
+}
+
+.navbar {
+    z-index: 1;
+    height: 135px;
+    position: fixed;
+    width: 100%;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding-left: 25%;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+}
+
+.nav-item {
+    font-family: sans-serif;
+}
+
+.nav-link {
+    display: block;
+    padding: 3px;
+    font-weight: normal;
+    color: black;
+}
+.nav-link hover {
+    color: grey;
+}
+
+.bio {
+    margin-top: 10px;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 footer {
@@ -111,12 +164,17 @@ footer {
 }
 
 .portFol {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 3rem;
+    font-family: 'Work Sans', sans-serif;   
+    margin-top: 1rem;
     font-size: 2.3rem;
     color: white;
+    z-index: 2;
+    filter: brightness(100%)
 }
 
+
+
+/* ------------- About Me Section -------------- */
 .myPortrait {
     
     display: block;
@@ -125,5 +183,288 @@ footer {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 20%;
-    border-radius: 15px;
+    border-radius: 50%;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.scroll-animations h3 {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+.hero-content h5 {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+.fadeInLeft {
+    visibility: visible;
+}
+
+
+
+/* -------------- PORTFOLIO CARDS -------------- */
+html {
+    font-size: 16px;
+    background-color: #181818;
+    
+}
+  
+  
+#pen-title,
+#pen-description {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 0;
+    color: #484848;
+}
+  
+#pen-title {
+    -webkit-transform: translate(-50%, -125%);
+            transform: translate(-50%, -125%);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+  
+#pen-description {
+    -webkit-transform: translate(-50%, 125%);
+            transform: translate(-50%, 125%);
+    font-size: 1.125rem;
+}
+  
+.card-checkbox {
+    display: none;
+}
+  
+.card {
+    box-sizing: border-box;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    width: 640px;
+    height: 428.8px;
+    margin-left:  -145px;
+    padding: 1rem;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    z-index: 0;
+    background-color: #ddd;
+    color: #181818;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+    transition: all .75s;
+}
+  
+.card-checkbox:first-of-type + .card, .card-checkbox:first-of-type:checked ~ .card-checkbox:nth-of-type(2) + .card {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    z-index: 2;
+    background-color: #fff;
+}
+  
+.card-checkbox:nth-of-type(2) + .card, .card-checkbox:first-of-type:checked ~ .card-checkbox:nth-of-type(3) + .card, .card-checkbox:nth-of-type(2):checked ~ .card-checkbox:nth-of-type(3) + .card {
+    z-index: 1;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    background-color: #eee;
+}
+  
+.card-checkbox:checked + .card {
+    margin-top: -240px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    top: 50%;
+    background-color: #fff;
+}
+  
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 27%;
+    list-style: none;
+    font-size: 1.25rem;
+    color: #686868;
+    background-color: #181818;
+    border-bottom: 3px solid grey;
+    margin-bottom: 0;
+    margin-top: 600px;
+}
+#nav li:not(.lowercase) {
+    text-transform: uppercase;
+}
+#nav label {
+    display: block;
+    padding: .75rem 1.25rem;
+    cursor: pointer;
+    transition: color .25s;
+}
+#nav label:hover {
+    color: #f8f8f8;
+}
+
+
+
+/*************************---------------------------- SOCIAL MEDIA ---------------------------------****************************/
+
+
+/* Add a black background color to the top navigation */
+.btn {
+    border: 1px solid cadetblue;
+}
+
+.topnav {
+    background-color: #1d283b;
+    overflow: hidden;
+    border-bottom: 1px solid darkgray;
+}
+
+.bottomnav {
+    height: 10rem;
+    background-color: white;
+    overflow: hidden;
+    border-bottom: 1px solid darkgray;
+}
+
+.logoText {
+    padding-top: 2%;
+    text-align: center;
+    padding-right: 63%;
+    color: #263069;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-btns .btn.facebook:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.facebook .fa {
+  color: #3b5998;
+}
+.social-btns .btn.github:before {
+  background-color: #25292e;
+}
+.social-btns .btn.github .fa {
+  color: #25292e;
+}
+.social-btns .btn.linkedin:before {
+  background-color: #327ab0;
+}
+.social-btns .btn.linkedin .fa {
+  color: #327ab0;
+}
+.social-btns .btn.instagram:before {
+  background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+}
+.social-btns .btn.instagram .fa {
+  color: #4baeea;
+
+}
+.social-btns .btn.stackOverFlow:before {
+  background-color: #e5853e;
+}
+.social-btns .btn.stackOverFlow .fa {
+  color: #e5853e;
+}
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.social-btns {
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  -webkit-box-shadow: 0 5px 15px -5px rgba(0,0,0,0);
+          box-shadow: 0 5px 15px -5px rgba(0,0,0,0);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+    background-color: #666666;
+    color: white;
+}
+
+/*************************------------------------------ SOCIAL MEDIA END ---------------------------------****************************/
+
+/************************-------------------------------- CONTACT FORM -----------------------------------*************************/
+.container {
+    margin-top: 15rem;
 }

@@ -2,27 +2,94 @@
 <%- contentFor('hero') %>
     <main class="hero">
     <div class="hero-content">
-        <h2 class="animated bounceIn">Welcome to My Site!</h2>
-        <p class="lookBorder">Take a look around to learn more about me and my love for Web Development</p>
-    </div>
+        <div class="social-btns">
+          <a class="btn linkedin" target="_blank" href="https://www.linkedin.com/in/kurtis-roberts/"><i class="fa fa-linkedin"></i></a>
+          <a class="btn github" target="_blank" href="https://github.com/Kurtis-Roberts"><i class="fa fa-github"></i></a>
+          <a class="btn stackOverFlow" target="_blank" href="https://stackoverflow.com/users/story/8624447"><i class="fa fa-stack-overflow"></i></a>
+          <a class="btn instagram" target="_blank" href="https://www.instagram.com/kurtis.roberts/"><i class="fa fa-instagram"></i></a>
+          <a  class="btn facebook" target="_blank" href="https://www.facebook.com/kurt.roberts.1485"><i class="fa fa-facebook"></i></a>
+        </div>
+            <h5 class="bio animated">Professional Bio</h5>
+      </div>
     
     </main>
-    <div class="portrait">
-        <img class="myPortrait" src="./img/Kurtis Roberts.jpg" alt="Kurtis Roberts">    
+    <div class="scroll-animations">
+      <div>
+        <img class="myPortrait animated" src="./img/Kurtis Roberts.jpg" alt="Kurtis Roberts"> 
+        
+        <h3>Hello my name is Kurtis Roberts. I have been learning to code and build websites for a year now and I love it! I am someone who
+            really loves to build and create things. Web Development has really opened me to a new world of creativity that I enjoy a lot!
+        </h3> 
+        
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        
+      </div>
     </div>
     
+
+
+
+
     
+    
+    <!-- <script src="/views/index.js"></script> -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script src="/views/index.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type='text/javascript'>
-                $(window).scroll(function() {
-      $('.myPortrait portrait').each(function() {
-        if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated bounceIn');
-        }
+
+
+///////////////////// REFRESH TO TOP OF PAGE ////////////////////
+    window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+  /////////////////// ANIMATIONS /////////////////////
+    $(document).ready(function() {
+  // Check if element is scrolled into view
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+  
+  // If element is scrolled into view, fade it in
+  $(window).scroll(function() {
+    $('.scroll-animations .animated').each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('fadeInLeft');
+      }
+      else $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    $('.scroll-animations .animated').stop().animate(
+        {opacity: (( 180-scroll )/100)+0.1},
+        "slow"
+    );
+});
       });
     });
+  });
+  
+   /////////////////// "PORTFOLIO BTN" SCROLL ////////////////////////
+  $("#portfolio").on("click touchstart", function(event) {
+    $('html, body').animate({
+        scrollTop: $('.card').offset().top - ($(window).height() - $('.card').outerHeight(true)) / 2
+    }, 800);
+
+})
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+}
+
+
     </script>
     
     
