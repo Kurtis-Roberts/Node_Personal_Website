@@ -7,32 +7,26 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 
-// app.set('view engine', 'ejs');
-// app.use(expressLayouts)
+app.set('view engine', 'ejs');
+app.use(expressLayouts)
 
-// app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/views');
 
-// var router = require('./app/routes.js')
+var router = require('./app/routes.js')
 
-// app.use('/', router)
+app.use('/', router)
 
-// app.use(express.static(__dirname + '/public/'))
+app.use(express.static(__dirname + '/public/'))
 
-// app.use(bodyParser.urlencoded({extended: true}));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
 // app.listen(port, function() {
 //     console.log('app running on port 8080')
 // })
-// app.listen(process.env.PORT || port)
+app.listen(process.env.PORT || port)
 
 app.post('/send-email', function (req, res) {
     let transporter = nodemailer.createTransport({
