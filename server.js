@@ -39,7 +39,7 @@ app.post('/send-email', function (req, res) {
         }
     });
     let mailOptions = {
-        // from: , // sender address
+        from: req.body.from, // sender address
         to: 'kurtimus23@gmail.com', // list of receivers
         subject: req.body.subject, // Subject line
         text: req.body.body + req.body.name + ' &lt;' + req.body.email + '&gt;',
