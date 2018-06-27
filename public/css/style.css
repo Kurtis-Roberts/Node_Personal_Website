@@ -377,7 +377,7 @@ html {
     left: 50%;
     width: 640px;
     height: 428.8px;
-    margin-left:  -145px;
+    margin-left: -145px;
     padding: 1rem;
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg);
@@ -403,7 +403,7 @@ html {
 }
   
 .card-checkbox:checked + .card {
-    margin-top: -240px;
+    margin-top: -250px;
     -webkit-transform: rotate(0);
             transform: rotate(0);
     top: 50%;
